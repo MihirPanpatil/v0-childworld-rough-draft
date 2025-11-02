@@ -3,29 +3,26 @@
 import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 export default function Hero() {
   useEffect(() => {
-    if (typeof window !== "undefined" && window.gsap) {
-      const gsap = window.gsap
-      const ScrollTrigger = window.ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger)
 
-      gsap.registerPlugin(ScrollTrigger)
+    gsap.from(".hero-content", {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      delay: 0.2,
+    })
 
-      gsap.from(".hero-content", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        delay: 0.2,
-      })
-
-      gsap.from(".hero-image", {
-        opacity: 0,
-        x: 30,
-        duration: 0.8,
-        delay: 0.4,
-      })
-    }
+    gsap.from(".hero-image", {
+      opacity: 0,
+      x: 30,
+      duration: 0.8,
+      delay: 0.4,
+    })
   }, [])
 
   return (

@@ -22,11 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" strategy="beforeInteractive" />
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-          strategy="beforeInteractive"
-        />
       </head>
       <body className={`font-sans antialiased`}>
         {children}

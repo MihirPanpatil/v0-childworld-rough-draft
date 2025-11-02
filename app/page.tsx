@@ -8,6 +8,15 @@ import BookSession from "@/components/book-session"
 import Contact from "@/components/contact"
 import MapSection from "@/components/map-section"
 import Footer from "@/components/footer"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+declare global {
+  interface Window {
+    gsap: typeof import('gsap');
+    ScrollTrigger: typeof import('gsap/ScrollTrigger');
+  }
+}
 
 export default function Home() {
   return (
