@@ -18,6 +18,7 @@ export default function Navigation() {
     { label: "Staff", href: "#staff" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
+    { label: "Book an Appointment", href: "#book-appointment" },
   ]
 
   return (
@@ -26,9 +27,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">C</span>
-            </div>
+            <img 
+              src="/logo-removebg-preview.png" 
+              alt="Childworld Logo" 
+              className="h-12 w-auto" 
+            />
             <span className="font-bold text-lg text-foreground hidden sm:inline">Childworld</span>
           </Link>
 
@@ -48,7 +51,7 @@ export default function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <a href="#book-session">Book Now</a>
+              <a href="#book-appointment">Book Now</a>
             </Button>
           </div>
 
@@ -72,8 +75,8 @@ export default function Navigation() {
               </a>
             ))}
             <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4">
-              <a href="#book-session" onClick={() => setIsOpen(false)}>
-                Book Now
+              <a href="#book-appointment" onClick={() => setIsOpen(false)}>
+                Book a Consultation
               </a>
             </Button>
           </div>

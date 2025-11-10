@@ -39,9 +39,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-column">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-md">C</span>
-              </div>
+              <img 
+                src="/logo-removebg-preview.png" 
+                alt="Childworld Logo" 
+                className="h-10 w-auto" 
+              />
               <span className="font-bold text-lg text-foreground">Childworld</span>
             </div>
             <p className="text-muted-foreground text-sm leading-snug">

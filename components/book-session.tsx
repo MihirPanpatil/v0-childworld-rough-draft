@@ -7,15 +7,15 @@ import { CheckCircle } from "lucide-react"
 
 export default function BookSession() {
   const sectionRef = useRef(null)
+  const [activeTab, setActiveTab] = useState<'children' | 'adults'>('children')
   const [formData, setFormData] = useState({
     childName: "",
-    parentName: "",
+    parentName: "", // Serves as "Full Name" for adults
     email: "",
     phone: "",
     serviceType: "individual-therapy",
     preferredDate: "",
-    preferredTime: "",
-    notes: "",
+    notes: ""
   })
 
   const [submitted, setSubmitted] = useState(false)
@@ -61,7 +61,6 @@ export default function BookSession() {
         phone: "",
         serviceType: "individual-therapy",
         preferredDate: "",
-        preferredTime: "",
         notes: "",
       })
     }, 3000)
@@ -69,7 +68,7 @@ export default function BookSession() {
 
   return (
     <section
-      id="book-session"
+      id="book-appointment"
       className="py-20 md:py-32 bg-gradient-to-br from-primary/8 via-background to-accent/8 relative overflow-hidden"
       ref={sectionRef}
     >
@@ -84,14 +83,40 @@ export default function BookSession() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <span className="inline-block text-sm font-medium text-primary mb-3">Schedule a Visit</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Book an Appointment</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Schedule a consultation with one of our experienced therapists. We'll work with you to find the perfect
-            time.
+            path forward.
           </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex bg-muted p-1 rounded-lg">
+            <button
+              onClick={() => setActiveTab('children')}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'children'
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground/80'
+              }`}
+            >
+              For Children
+            </button>
+            <button
+              onClick={() => setActiveTab('adults')}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'adults'
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground/80'
+              }`}
+            >
+              For Adults
+            </button>
+          </div>
         </div>
 
         {/* Form */}
@@ -110,20 +135,24 @@ export default function BookSession() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Child and Parent Info */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Child's Name *</label>
-                  <input
-                    type="text"
-                    name="childName"
-                    value={formData.childName}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                    placeholder="Enter child's name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Parent/Guardian Name *</label>
+                {activeTab === 'children' && (
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Child's Name *</label>
+                    <input
+                      type="text"
+                      name="childName"
+                      value={formData.childName}
+                      onChange={handleChange}
+                      required={activeTab === 'children'}
+                      className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                      placeholder="Enter child's name"
+                    />
+                  </div>
+                )}
+                <div className={activeTab === 'adults' ? 'md:col-span-2' : ''}>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {activeTab === 'children' ? "Parent/Guardian Name *" : "Full Name *"}
+                  </label>
                   <input
                     type="text"
                     name="parentName"
@@ -131,7 +160,7 @@ export default function BookSession() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                    placeholder="Enter parent/guardian name"
+                    placeholder={activeTab === 'children' ? "Enter parent/guardian name" : "Enter your full name"}
                   />
                 </div>
               </div>
@@ -159,30 +188,33 @@ export default function BookSession() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                    placeholder="+91 77092 64029
-"
+                    placeholder="+91 77092 64029"
                   />
                 </div>
               </div>
 
-              {/* Service Type */}
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Service Type *</label>
-                <select
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                >
-                  <option value="individual-therapy">Individual Therapy</option>
-                  <option value="family-counseling">Family Counseling</option>
-                  <option value="group-therapy">Group Therapy</option>
-                  <option value="crisis-support">Crisis Support</option>
-                </select>
-              </div>
+              {activeTab === 'adults' && (
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Service Type *</label>
+                    <select
+                      name="serviceType"
+                      value={formData.serviceType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    >
+                      <option value="individual-therapy">Individual Therapy</option>
+                      <option value="couples-therapy">Couples Therapy</option>
+                      <option value="family-therapy">Family Therapy</option>
+                      <option value="group-therapy">Group Therapy</option>
+                      <option value="relationship-counseling">Relationship Counseling</option>
+                    </select>
+                  </div>
+                </div>
+              )}
 
-              {/* Date and Time */}
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* Date - Only for Adults tab */}
+              {activeTab === 'adults' && (
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Preferred Date *</label>
                   <input
@@ -194,18 +226,7 @@ export default function BookSession() {
                     className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Preferred Time *</label>
-                  <input
-                    type="time"
-                    name="preferredTime"
-                    value={formData.preferredTime}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  />
-                </div>
-              </div>
+              )}
 
               {/* Notes */}
               <div>
@@ -220,9 +241,19 @@ export default function BookSession() {
                 />
               </div>
 
+              {activeTab === 'children' && (
+                <div className="text-sm text-muted-foreground bg-muted/30 p-3 rounded-lg border border-border">
+                  <p>Note: The specific service type for your child will be determined after an initial evaluation during the first appointment.</p>
+                </div>
+              )}
+
+              <div className="text-sm text-muted-foreground bg-muted/30 p-3 rounded-lg border border-border">
+                <p>Our representative will contact you via WhatsApp on the provided number to confirm your appointment, discuss available time slots, and address any additional details.</p>
+              </div>
+
               {/* Submit Button */}
               <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                Book Session
+                {activeTab === 'children' ? 'Book Session' : 'Book Session'}
               </Button>
             </form>
           )}

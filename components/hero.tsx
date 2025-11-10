@@ -55,14 +55,16 @@ export default function Hero() {
                 Child World is a multidisciplinary child development centre dedicated to supporting neurodiverse children and their families through specialized therapies and counseling. We offer holistic support for every stage of development.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary/5 bg-transparent"
-              >
-                Learn More
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#about">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                >
+                  Learn More
+                </Button>
+              </a>
             </div>
           </div>
 
