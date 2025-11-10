@@ -78,35 +78,6 @@ export default function MapSection() {
           ></iframe>
         </div>
 
-
-
-        {/* Location Details */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="location-card bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300">
-            <h3 className="text-lg font-semibold text-foreground mb-2">Address</h3>
-            <p className="text-muted-foreground">
-              123 Wellness Avenue
-              <br />
-              Healing City, HC 12345
-            </p>
-          </div>
-          <div className="location-card bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300">
-            <h3 className="text-lg font-semibold text-foreground mb-2">Parking</h3>
-            <p className="text-muted-foreground">
-              Free parking available
-              <br />
-              Accessible spaces provided
-            </p>
-          </div>
-          <div className="location-card bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300">
-            <h3 className="text-lg font-semibold text-foreground mb-2">Transit</h3>
-            <p className="text-muted-foreground">
-              Bus routes 5, 12, 18
-              <br />
-              Train station nearby
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

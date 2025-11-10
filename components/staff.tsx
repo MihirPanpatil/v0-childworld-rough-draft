@@ -48,7 +48,7 @@ export default function Staff() {
   return (
     <section
       id="staff"
-      className="py-16 md:py-24 bg-gradient-to-b from-background via-accent/5 to-background relative overflow-hidden"
+      className="py-20 md:py-32 bg-gradient-to-b from-background via-accent/5 to-background relative overflow-hidden"
       ref={sectionRef}
     >
       <div className="absolute inset-0 overflow-hidden">

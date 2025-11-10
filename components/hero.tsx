@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative py-5 md:py-18 bg-gradient-to-br from-primary/15 via-background to-accent/8 overflow-hidden"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-primary/15 via-background to-accent/8 overflow-hidden"
     >
       <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-2xl animate-float"></div>
       <div
