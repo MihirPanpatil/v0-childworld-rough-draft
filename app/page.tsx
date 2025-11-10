@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation"
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Services from "@/components/services"
+import Gallery from "@/components/gallery"
 import Staff from "@/components/staff"
 import Testimonials from "@/components/testimonials"
 import BookSession from "@/components/book-session"
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <Gallery />
       <Staff />
       <Testimonials />
       <BookSession />

@@ -54,9 +54,11 @@ export default function MapSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Find Us</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center mb-16">
+          <span className="inline-block text-sm font-medium text-primary mb-3">Our Location</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Find Us</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Visit our welcoming clinic located in the heart of the community. We're easy to find and accessible by
             public transportation.
           </p>
@@ -65,7 +67,7 @@ export default function MapSection() {
         {/* Map Container */}
         <div className="map-container rounded-2xl overflow-hidden border border-border shadow-lg h-96 md:h-[500px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3855555%3A0x1234567890abcdef!2s123%20Wellness%20Avenue!5e0!3m2!1sen!2sus!4v1234567890"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2999847208716!2d73.00938492013042!3d19.094491319584954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c17adc478d39%3A0x63463bfe0b04e357!2sChild%20World!5e0!3m2!1sen!2sin!4v1762788907696!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -75,6 +77,8 @@ export default function MapSection() {
             title="Childworld Clinic Location"
           ></iframe>
         </div>
+
+
 
         {/* Location Details */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">

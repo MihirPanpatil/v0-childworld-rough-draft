@@ -64,19 +64,29 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 md:py-18 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
+      className="py-20 md:py-32 bg-gradient-to-br from-background via-secondary/5 to-background relative overflow-hidden"
       ref={sectionRef}
     >
       <div
-        className="absolute top-20 right-20 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-float"
-        style={{ animationDelay: "0.5s" }}
+        className="absolute top-40 left-20 w-28 h-28 bg-primary/10 rounded-full blur-2xl animate-float"
+        style={{ animationDelay: "0.4s" }}
       ></div>
       <div
-        className="absolute bottom-40 left-10 w-32 h-32 bg-primary/8 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "1.5s" }}
+        className="absolute bottom-20 right-20 w-40 h-40 bg-accent/8 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: "1.1s" }}
       ></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block text-sm font-medium text-primary mb-3">About Us</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Vision</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Every child deserves to feel understood, supported, and empowered. At Child World, we celebrate every unique journey — because real growth is about happiness, confidence, and belonging.
+          </p>
+        </div>
+
         {/* Vision & Mission */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Image */}
@@ -91,13 +101,7 @@ export default function About() {
 
           {/* Right Content */}
           <div className="space-y-8 vision-content">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Vision</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                To create a world where every child, regardless of ability or background, feels understood, supported, and empowered to reach their fullest potential. At Child World, we believe that every child is unique, and every journey of growth deserves care, understanding, and celebration. Because at Child World, growth isn’t just about milestones. It’s about happiness, confidence, and connection.
-
-              </p>
-            </div>
+            
 
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>

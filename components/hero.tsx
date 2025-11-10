@@ -43,12 +43,15 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 hero-content">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Nurturing Young Minds
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="hero-content text-center md:text-left">
+            <div className="space-y-6">
+              <div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4">
+                  Nurturing Young Minds
+                </h1>
+                <div className="w-20 h-1 bg-primary mx-auto md:mx-0 mb-6"></div>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto md:mx-0">
                 Child World is a multidisciplinary child development centre dedicated to supporting neurodiverse children and their families through specialized therapies and counseling. We offer holistic support for every stage of development.
               </p>
             </div>

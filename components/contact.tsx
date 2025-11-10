@@ -89,8 +89,10 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <span className="inline-block text-sm font-medium text-primary mb-3">Contact Us</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Get in Touch</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Have questions? We'd love to hear from you. Contact us today and let's discuss how we can help.
           </p>
         </div>
@@ -102,7 +104,7 @@ export default function Contact() {
               <Phone className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
-            <p className="text-muted-foreground mb-2">+91 77092 64029</p>
+            <p className="text-muted-foreground mb-2">+91 77092 64029 / +91 77100 58135</p>
             <p className="text-sm text-muted-foreground">Available during business hours</p>
           </div>
 
@@ -210,13 +212,15 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Visit Us</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Childworld Mental Health Clinic
+                Shop 35, behind Samta Nagar Bus Stop,  
                 <br />
-                123 Wellness Avenue
+                FAM CHS, Kalash Udyan,
                 <br />
-                Healing City, HC 12345
+                Sector 11, Kopar Khairane,
                 <br />
-                United States
+                Navi Mumbai, Maharashtra
+                <br />
+                400709
               </p>
               <p className="text-sm text-muted-foreground">
                 Located in a welcoming, child-friendly facility designed to make every visit comfortable and safe.
