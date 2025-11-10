@@ -41,10 +41,12 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-3">
               <img 
                 src="/logo-removebg-preview.png" 
-                alt="Childworld Logo" 
+                alt="Child World Logo" 
                 className="h-10 w-auto" 
               />
-              <span className="font-bold text-lg text-foreground">Childworld</span>
+              <span className="font-extrabold text-xl tracking-tight text-foreground">
+                <span className="text-primary">Child</span> World
+              </span>
             </div>
             <p className="text-muted-foreground text-sm leading-snug">
               Dedicated to nurturing young minds and supporting families through their mental health journey.
@@ -148,7 +150,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <p className="text-muted-foreground text-xs md:text-sm text-center md:text-left">
-            &copy; {currentYear} Childworld Mental Health Clinic. All rights reserved.
+            &copy; {currentYear} <span className="text-primary">Child</span> <span className="text-accent">World</span> Mental Health Clinic. All rights reserved.
           </p>
 
           {/* Social Links */}

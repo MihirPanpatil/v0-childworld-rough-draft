@@ -29,10 +29,12 @@ export default function Navigation() {
           <Link href="/" className="flex items-center gap-2">
             <img 
               src="/logo-removebg-preview.png" 
-              alt="Childworld Logo" 
+              alt="Child World Logo" 
               className="h-12 w-auto" 
             />
-            <span className="font-bold text-lg text-foreground hidden sm:inline">Childworld</span>
+            <span className="font-extrabold text-xl tracking-tight text-foreground hidden sm:inline">
+              <span className="text-primary">Child</span> World
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,7 +43,7 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                className="text-foreground hover:text-primary transition-colors text-base font-normal"
               >
                 {link.label}
               </a>
