@@ -102,7 +102,7 @@ export default function Contact() {
               <Phone className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
-            <p className="text-muted-foreground mb-2">(555) 123-4567</p>
+            <p className="text-muted-foreground mb-2">+91 77092 64029</p>
             <p className="text-sm text-muted-foreground">Available during business hours</p>
           </div>
 
@@ -111,7 +111,7 @@ export default function Contact() {
               <Mail className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
-            <p className="text-muted-foreground mb-2">info@childworld.com</p>
+            <p className="text-muted-foreground mb-2">childworldcdc@gmail.com</p>
             <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
           </div>
 
@@ -120,8 +120,8 @@ export default function Contact() {
               <Clock className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Hours</h3>
-            <p className="text-muted-foreground mb-1">Mon - Fri: 9am - 6pm</p>
-            <p className="text-sm text-muted-foreground">Sat: 10am - 4pm</p>
+            <p className="text-muted-foreground mb-1">Mon - Sat: 9am - 9pm</p>
+            
           </div>
         </div>
 
@@ -221,15 +221,6 @@ export default function Contact() {
               <p className="text-sm text-muted-foreground">
                 Located in a welcoming, child-friendly facility designed to make every visit comfortable and safe.
               </p>
-            </div>
-
-            <div className="contact-card bg-gradient-to-br from-primary/15 to-accent/15 border border-primary/30 rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-foreground mb-3">Emergency Support</h3>
-              <p className="text-muted-foreground mb-4">
-                If your child is in crisis, please call our emergency line immediately:
-              </p>
-              <p className="text-2xl font-bold text-primary">(555) 999-8888</p>
-              <p className="text-sm text-muted-foreground mt-2">Available 24/7</p>
             </div>
           </div>
         </div>

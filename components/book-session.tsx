@@ -85,7 +85,7 @@ export default function BookSession() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Book a Session</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Book an Appointment</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Schedule a consultation with one of our experienced therapists. We'll work with you to find the perfect
             time.
@@ -145,7 +145,7 @@ export default function BookSession() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                    placeholder="your@email.com"
+                    placeholder="childworldcdc@gmail.com"
                   />
                 </div>
                 <div>
@@ -157,7 +157,8 @@ export default function BookSession() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                    placeholder="(555) 123-4567"
+                    placeholder="+91 77092 64029
+"
                   />
                 </div>
               </div>

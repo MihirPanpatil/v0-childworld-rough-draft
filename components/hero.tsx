@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative py-20 md:py-32 bg-gradient-to-br from-primary/15 via-background to-accent/8 overflow-hidden"
+      className="relative py-5 md:py-18 bg-gradient-to-br from-primary/15 via-background to-accent/8 overflow-hidden"
     >
       <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-2xl animate-float"></div>
       <div
@@ -44,24 +44,15 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 hero-content">
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Welcome to Childworld</span>
-            </div>
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Nurturing Young Minds
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Childworld is a specialized mental health clinic dedicated to supporting children and adolescents
-                through their emotional and psychological journey. We create a safe, welcoming space where every child
-                can thrive.
+                Child World is a multidisciplinary child development centre dedicated to supporting neurodiverse children and their families through specialized therapies and counseling. We offer holistic support for every stage of development.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Book a Session <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
               <Button
                 size="lg"
                 variant="outline"

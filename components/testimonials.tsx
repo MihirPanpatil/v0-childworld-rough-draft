@@ -44,42 +44,42 @@ export default function Testimonials() {
       name: "Sarah's Parent",
       relation: "Parent",
       content:
-        "Childworld has been a lifesaver for our family. The therapists are incredibly compassionate and professional. Our daughter has made remarkable progress in just a few months.",
+        "Dr. Vijay Sonawane is an exceptional developmental pediatrician who is truly dedicated to helping children and their families. We have been working with him at CHILD WORLD CDC, part of Sai Superspeciality Clinic in Kamothe, for the past four to five months. During this time, we have seen remarkable and positive changes in our child's development.",
       rating: 5,
     },
     {
       name: "Marcus, Age 14",
       relation: "Patient",
       content:
-        "I was nervous about therapy at first, but the team made me feel comfortable and understood. They really helped me work through my anxiety. I'm so grateful.",
+        "My son, Trikay, was struggling with eye contact, recognizing his name,smile back issues. We went to see Dr. Vijay Sonawane, a kids' doctor and development specialist at the CHILDWORLD CDC at Sai Superspeciality Clinic in Kamothe. Following Dr. Sonawane's advice for a few months, Trikay has improved a lot! I'd totally suggest this place to other parents dealing with similar kid development problems.",
       rating: 5,
     },
     {
       name: "Jennifer's Family",
       relation: "Parent",
       content:
-        "The family counseling sessions have transformed our relationships. We communicate better now and understand each other more. Highly recommended!",
+        "I am very very very happy, my daughter has shown a lot of progress. I tried at many places but did not get any result, but here in just 2 months I got to see a lot of progress. My daughter's speech has improved significantly. This is the best child development center for me. Thank you.",
       rating: 5,
     },
     {
       name: "David, Age 11",
       relation: "Patient",
       content:
-        "The art therapy sessions are so cool! I get to express my feelings in creative ways. The therapists are really nice and make me feel heard.",
+        "I am very very very happy, my daughter has shown a lot of progress. I tried at many places but did not get any result, but here in just 2 months I got to see a lot of progress. My daughter's speech has improved significantly. This is the best child development center for me. Thank you.",
       rating: 5,
     },
     {
       name: "Robert & Michelle",
       relation: "Parents",
       content:
-        "We were struggling to help our son with his behavioral issues. The team at Childworld provided us with practical strategies and genuine support. Amazing experience.",
+        "Working at Child World, Koparkhairane has been an incredibly rewarding experience. The team is supportive, collaborative, and deeply committed to helping neurodiverse children and families. It's amazing to see the positive impact of the work the team puts in every single day. It truly feels good to be part of a place that is able to make such a difference in children’s lives!",
       rating: 5,
     },
     {
       name: "Emma, Age 13",
       relation: "Patient",
       content:
-        "Coming to Childworld helped me realize I'm not alone. The group therapy sessions connected me with other kids who understand what I'm going through.",
+        "A really great Therapy Experience. Helped me a lot with anxiety and confidence issues. The sessions helped a lot as it allowed me to open up and have a space for myself. Thank you so muchhh. Would recommend for adult counseling for sure!!",
       rating: 5,
     },
   ]
@@ -130,29 +130,8 @@ export default function Testimonials() {
               {/* Content */}
               <p className="text-muted-foreground leading-relaxed mb-4 italic">"{testimonial.content}"</p>
 
-              {/* Author */}
-              <div className="pt-4 border-t border-border">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.relation}</p>
-              </div>
             </div>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20 pt-20 border-t border-border">
-          <div className="text-center">
-            <p className="stat-number text-4xl md:text-5xl font-bold text-primary mb-2">500+</p>
-            <p className="text-muted-foreground">Children Helped</p>
-          </div>
-          <div className="text-center">
-            <p className="stat-number text-4xl md:text-5xl font-bold text-primary mb-2">98%</p>
-            <p className="text-muted-foreground">Satisfaction Rate</p>
-          </div>
-          <div className="text-center">
-            <p className="stat-number text-4xl md:text-5xl font-bold text-primary mb-2">10+</p>
-            <p className="text-muted-foreground">Years Experience</p>
-          </div>
         </div>
       </div>
     </section>

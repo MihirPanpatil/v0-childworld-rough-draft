@@ -64,7 +64,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 md:py-32 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
+      className="py-20 md:py-18 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
       ref={sectionRef}
     >
       <div
@@ -94,17 +94,15 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                To create a world where every child has access to compassionate, professional mental health support that
-                empowers them to overcome challenges and reach their full potential.
+                To create a world where every child, regardless of ability or background, feels understood, supported, and empowered to reach their fullest potential. At Child World, we believe that every child is unique, and every journey of growth deserves care, understanding, and celebration. Because at Child World, growth isn’t just about milestones. It’s about happiness, confidence, and connection.
+
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Childworld is committed to providing exceptional mental health services to children and adolescents,
-                helping them navigate emotional challenges, build resilience, and develop healthy coping strategies in a
-                safe, nurturing environment.
+                At Child World, our mission is to provide compassionate, evidence-based therapy and counseling that nurtures growth in children and strengthens families. We aim to build an inclusive environment that promotes emotional, social, and developmental well-being for neurodiverse children and their caregivers.
               </p>
             </div>
 
@@ -113,46 +111,26 @@ export default function About() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold mt-1">•</span>
-                  <span className="text-muted-foreground">Provide accessible, evidence-based mental health care</span>
+                  <span className="text-muted-foreground">To offer holistic therapy programs that support each child’s unique developmental needs.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold mt-1">•</span>
-                  <span className="text-muted-foreground">Build strong therapeutic relationships with each child</span>
+                  <span className="text-muted-foreground">To empower parents through guidance, education, and counseling.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold mt-1">•</span>
-                  <span className="text-muted-foreground">Support families through the healing journey</span>
+                  <span className="text-muted-foreground">To promote inclusion, awareness, and acceptance of neurodiversity in the community.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold mt-1">•</span>
-                  <span className="text-muted-foreground">Promote mental health awareness in our community</span>
+                  <span className="text-muted-foreground">To continuously improve our practices through professional development and teamwork.</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Core Values */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Our Core Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => {
-              const Icon = value.icon
-              return (
-                <div
-                  key={index}
-                  className="value-card bg-card border border-border rounded-xl p-6 hover:shadow-lg hover:border-primary/50 transition-all duration-300 hover:bg-primary/5"
-                >
-                  <div className="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        
       </div>
     </section>
   )
