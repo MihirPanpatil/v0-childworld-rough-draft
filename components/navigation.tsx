@@ -1,5 +1,7 @@
 "use client"
 
+"use client"
+
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
@@ -45,7 +47,9 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Book Now</Button>
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <a href="#book-session">Book Now</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,7 +71,11 @@ export default function Navigation() {
                 {link.label}
               </a>
             ))}
-            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4">Book Now</Button>
+            <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4">
+              <a href="#book-session" onClick={() => setIsOpen(false)}>
+                Book Now
+              </a>
+            </Button>
           </div>
         )}
       </div>

@@ -20,7 +20,7 @@ export default function Footer() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top 80%",
+          start: "top 90%", // Trigger a bit earlier for compact footer
           toggleActions: "play none none none",
         },
       })
@@ -34,28 +34,27 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -ml-16 -mb-16"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative z-10">
-        {/* Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
+        <div className="grid md:grid-cols-4 gap-6 mb-8">
           {/* Brand */}
           <div className="footer-column">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">C</span>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-md">C</span>
               </div>
               <span className="font-bold text-lg text-foreground">Childworld</span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-snug">
               Dedicated to nurturing young minds and supporting families through their mental health journey.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="footer-column">
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-foreground mb-3">Quick Links</h3>
+            <ul className="space-y-1.5">
               <li>
-                <a href="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a href="#home" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Home
                 </a>
               </li>
@@ -77,28 +76,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services - Updated with actual services */}
           <div className="footer-column">
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-foreground mb-3">Services</h3>
+            <ul className="space-y-1.5">
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Individual Therapy
+                  Behaviour Therapy
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Family Counseling
+                  Speech Therapy
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Group Therapy
+                  Occupational Therapy
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Crisis Support
+                  Child Therapy
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Counseling for Adults
                 </a>
               </li>
             </ul>
@@ -106,72 +110,74 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="footer-column">
-            <h3 className="font-semibold text-foreground mb-4">Contact</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-foreground mb-3">Contact</h3>
+            <ul className="space-y-1.5">
               <li>
                 <a
-                  href="tel:(555)123-4567"
+                  href="tel:+917709264029"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  (555) 123-4567
+                  +91 77092 64029 / +91 77100 58135
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@childworld.com"
+                  href="mailto:childworldcdc@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  info@childworld.com
+                  childworldcdc@gmail.com
                 </a>
               </li>
-              <li className="text-muted-foreground text-sm">
-                123 Wellness Avenue
+              <li className="text-muted-foreground text-sm leading-snug mt-2">
+                Shop 35, Kalash Udyan,
                 <br />
-                Healing City, HC 12345
+                Sector 11, Kopar Khairane,
+                <br />
+                Navi Mumbai, 400709
               </li>
             </ul>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border mb-8"></div>
+        <div className="border-t border-border mb-6"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs md:text-sm text-center md:text-left">
             &copy; {currentYear} Childworld Mental Health Clinic. All rights reserved.
           </p>
 
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <a
               href="#"
-              className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Facebook"
             >
-              <Facebook className="w-5 h-5" />
+              <Facebook className="w-4 h-4" />
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Twitter"
             >
-              <Twitter className="w-5 h-5" />
+              <Twitter className="w-4 h-4" />
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Instagram"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-4 h-4" />
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
             </a>
           </div>
 
