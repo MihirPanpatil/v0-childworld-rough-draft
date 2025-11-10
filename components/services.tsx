@@ -181,8 +181,8 @@ export default function Services() {
             Our team is ready to help your child thrive. Schedule a consultation with one of our experienced therapists
             today.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Book a Consultation
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <a href="#book-appointment">Book a Consultation</a>
           </Button>
         </div>
       </div>
