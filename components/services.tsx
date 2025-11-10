@@ -1,10 +1,75 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { Brain, Users, BookOpen, Zap } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { MessageCircle, Activity, Heart, HeartHandshake, Circle as Ring, Zap, Baby, Users, BookOpen, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const servicesData = {
+  kids: [
+    {
+      icon: Zap,
+      title: "Behaviour Therapy",
+      description:
+        "Helps children develop positive habits, emotional control, and social skills through fun, structured, play-based techniques.",
+      features: ["Positive Habits", "Emotional Control", "Social Skills"],
+    },
+    {
+      icon: MessageCircle,
+      title: "Speech Therapy",
+      description:
+        "Improves speech, language, and communication so children can express themselves confidently and clearly.",
+      features: ["Speech Improvement", "Language Development", "Confident Communication"],
+    },
+    {
+      icon: Activity,
+      title: "Occupational Therapy (OT)",
+      description:
+        "Builds motor skills, coordination, and sensory balance to support children's daily independence and growth.",
+      features: ["Motor Skills", "Coordination", "Sensory Balance"],
+    },
+    {
+      icon: Baby,
+      title: "Child Therapy",
+      description:
+        "Offers emotional and developmental support through play and creative expression in a safe, nurturing space.",
+      features: ["Emotional Support", "Developmental Growth", "Creative Expression"],
+    },
+  ],
+  adults: [
+    {
+      icon: Heart,
+      title: "Counseling for Adults",
+      description:
+        "Provides parents and caregivers with emotional support, stress management, and positive parenting guidance.",
+      features: ["Emotional Support", "Stress Management", "Parenting Guidance"],
+    },
+    {
+      icon: Users,
+      title: "Teenage Counseling",
+      description:
+        "Supports teenagers through emotional, academic, and social challenges while helping them build confidence and self-awareness.",
+      features: ["Emotional Support", "Academic Guidance", "Confidence Building"],
+    },
+    {
+      icon: HeartHandshake,
+      title: "Relationship Counseling",
+      description:
+        "Guides individuals and couples to better understand themselves and each other, improving emotional connection and mutual respect.",
+      features: ["Emotional Connection", "Understanding", "Mutual Respect"],
+    },
+    {
+      icon: Ring,
+      title: "Marriage Counseling",
+      description:
+        "Helps couples strengthen communication, rebuild trust, and create healthy, supportive relationships.",
+      features: ["Better Communication", "Trust Building", "Healthy Relationships"],
+    },
+    
+  ]
+}
+
 export default function Services() {
+  const [activeTab, setActiveTab] = useState<'kids' | 'adults'>('kids')
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -26,37 +91,9 @@ export default function Services() {
         },
       })
     }
-  }, [])
+  }, [activeTab])
 
-  const services = [
-    {
-      icon: Brain,
-      title: "Individual Therapy",
-      description:
-        "One-on-one counseling sessions tailored to each child's unique needs, using evidence-based therapeutic approaches.",
-      features: ["Cognitive Behavioral Therapy", "Play Therapy", "Art Therapy"],
-    },
-    {
-      icon: Users,
-      title: "Family Counseling",
-      description:
-        "Sessions involving family members to improve communication, resolve conflicts, and strengthen family bonds.",
-      features: ["Family Dynamics", "Conflict Resolution", "Parenting Support"],
-    },
-    {
-      icon: BookOpen,
-      title: "Group Therapy",
-      description:
-        "Therapeutic groups where children can connect with peers, share experiences, and develop social skills.",
-      features: ["Social Skills", "Peer Support", "Coping Strategies"],
-    },
-    {
-      icon: Zap,
-      title: "Crisis Support",
-      description: "Immediate support for children experiencing acute emotional distress or crisis situations.",
-      features: ["Emergency Response", "Safety Planning", "Follow-up Care"],
-    },
-  ]
+  const services = servicesData[activeTab]
 
   return (
     <section
@@ -78,9 +115,35 @@ export default function Services() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We offer a comprehensive range of mental health services designed to support children and adolescents at
-            every stage of their journey.
+            At Child World, we offer a range of therapies and counseling services designed to support children, parents, and families at every stage of life.
+
           </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex bg-muted p-1 rounded-lg">
+            <button
+              onClick={() => setActiveTab('kids')}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'kids'
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground/80'
+              }`}
+            >
+              For Kids
+            </button>
+            <button
+              onClick={() => setActiveTab('adults')}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'adults'
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground/80'
+              }`}
+            >
+              For Adults
+            </button>
+          </div>
         </div>
 
         {/* Services Grid */}
