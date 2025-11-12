@@ -36,25 +36,25 @@ export default function Gallery() {
   const columns = [
     // Column 1
     [
-      { src: "/1.jpeg", height: "h-64 md:h-96" }, // Tall on md+
-      { src: "/5.jpeg", height: "h-64" },        // Short
-      { src: "/9.jpeg", height: "h-80" },        // Medium
+      { src: "/5.jpeg", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/1.jpeg", height: "h-64" },        // Short
+      { src: "/21.avif", height: "h-80" },        // Medium
     ],
     // Column 2
     [
-      { src: "/2.jpeg", height: "h-80" },        // Medium
-      { src: "/6.jpeg", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/6.jpeg", height: "h-80" },        // Medium
+      { src: "/2.jpeg", height: "h-64 md:h-96" }, // Tall on md+
       { src: "/10.jpeg", height: "h-64" },       // Short
     ],
     // Column 3
     [
       { src: "/3.jpeg", height: "h-64" },        // Short
-      { src: "/7.jpeg", height: "h-80" },        // Medium
-      { src: "/11.jpg", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/23.avif", height: "h-80" },        // Medium
+      { src: "/22.avif", height: "h-64 md:h-96" }, // Tall on md+
     ],
     // Column 4
     [
-      { src: "/8.jpeg", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/24.jpeg", height: "h-64 md:h-96" }, // Tall on md+
       { src: "/4.jpeg", height: "h-80" },        // Medium
       { src: "/12.jpg", height: "h-64" },        // Short
     ],

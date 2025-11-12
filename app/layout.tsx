@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Childworld - Children Mental Health Clinic",
+  title: "Child World! - Child Development Center",
   description: "Professional mental health services for children and adolescents",
   generator: "v0.app",
 }

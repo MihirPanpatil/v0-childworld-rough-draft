@@ -93,7 +93,7 @@ export default function About() {
           <div className="relative h-96 md:h-full">
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 to-primary/25 rounded-2xl"></div>
             <img
-              src="/children-therapy-session-supportive-environment.jpg"
+              src="5-1.jpeg"
               alt="Therapy session with supportive environment"
               className="w-full h-full object-cover rounded-2xl"
             />

@@ -230,26 +230,49 @@ export default function Contact() {
 
           {/* Address Info */}
           <div className="space-y-6">
-            <div className="contact-card bg-card border border-border rounded-2xl p-8">
-              <div className="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-semibold text-foreground">Our Locations</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="contact-card bg-card border border-border rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center mb-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-3">Kopar Khairane</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Shop 35, behind Samta Nagar Bus Stop,
+                  <br />
+                  FAM CHS, Kalash Udyan,
+                  <br />
+                  Sector 11, Kopar Khairane,
+                  <br />
+                  Navi Mumbai, Maharashtra
+                  <br />
+                  400709
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Visit Us</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Shop 35, behind Samta Nagar Bus Stop,  
-                <br />
-                FAM CHS, Kalash Udyan,
-                <br />
-                Sector 11, Kopar Khairane,
-                <br />
-                Navi Mumbai, Maharashtra
-                <br />
-                400709
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Located in a welcoming, child-friendly facility designed to make every visit comfortable and safe.
-              </p>
+              
+              <div className="contact-card bg-card border border-border rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center mb-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-3">Badlapur West</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  1st Floor, Room 101,
+                  <br />
+                  Murlidhar Plaza Apartment,
+                  <br />
+                  Nr. Apoorv Hospital,
+                  <br />
+                  Datta Chowk, Manjarli,
+                  <br />
+                  Badlapur West
+                  <br />
+                  421503
+                </p>
+              </div>
             </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              Located in welcoming, child-friendly facilities designed to make every visit comfortable and safe.
+            </p>
           </div>
         </div>
       </div>

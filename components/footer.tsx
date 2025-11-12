@@ -166,14 +166,7 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Terms of Service
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>

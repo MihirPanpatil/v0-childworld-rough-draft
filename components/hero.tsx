@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="relative h-96 md:h-full hero-image">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/25 to-accent/25 rounded-2xl"></div>
             <img
-              src="/children-playing-and-smiling-in-a-safe-welcoming-e.jpg"
+              src="4.jpeg"
               alt="Children in a welcoming environment"
               className="w-full h-full object-cover rounded-2xl"
             />
