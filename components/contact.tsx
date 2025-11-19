@@ -58,7 +58,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // 1. Create the payload with a specific formType
     const payload = {
       ...formData,
@@ -147,7 +147,7 @@ export default function Contact() {
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Hours</h3>
             <p className="text-muted-foreground mb-1">Mon - Sat: 9am - 9pm</p>
-            
+
           </div>
         </div>
 
@@ -249,12 +249,12 @@ export default function Contact() {
                   400709
                 </p>
               </div>
-              
+
               <div className="contact-card bg-card border border-border rounded-2xl p-6 h-full">
                 <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center mb-3">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
-                <h4 className="text-lg font-semibold text-foreground mb-3">Badlapur West</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-3">Badlapur (W)</h4>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   1st Floor, Room 101,
                   <br />
@@ -267,6 +267,46 @@ export default function Contact() {
                   Badlapur West
                   <br />
                   421503
+                </p>
+              </div>
+
+              <div className="contact-card bg-card border border-border rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center mb-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-3">Kamothe</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  ShreeRam Arcade,
+                  <br />
+                  Shop No-01/Plot no-30,31,32,
+                  <br />
+                  near Central Bank Of India,
+                  <br />
+                  Sector 20, Kamothe, Panvel,
+                  <br />
+                  Navi Mumbai, Maharashtra
+                  <br />
+                  410209
+                </p>
+              </div>
+
+              <div className="contact-card bg-card border border-border rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center mb-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-3">Nerul (W)</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Plot No 111,
+                  <br />
+                  Sector 18-A,
+                  <br />
+                  nearby Agri Koli Bhavan,
+                  <br />
+                  Nerul West, Navi Mumbai,
+                  <br />
+                  Maharashtra
+                  <br />
+                  400706
                 </p>
               </div>
             </div>

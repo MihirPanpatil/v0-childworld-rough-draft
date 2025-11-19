@@ -42,15 +42,15 @@ export default function Gallery() {
     ],
     // Column 2
     [
-      { src: "/6.jpeg", height: "h-80" },        // Medium
-      { src: "/2.jpeg", height: "h-64 md:h-96" }, // Tall on md+
-      { src: "/10.jpeg", height: "h-64" },       // Short
+      { src: "/31.jpeg", height: "h-80" },        // Medium
+      { src: "/10.jpeg", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/2.jpeg", height: "h-64" },       // Short
     ],
     // Column 3
     [
       { src: "/3.jpeg", height: "h-64" },        // Short
-      { src: "/23.avif", height: "h-80" },        // Medium
-      { src: "/22.avif", height: "h-64 md:h-96" }, // Tall on md+
+      { src: "/32.jpeg", height: "h-80" },        // Medium
+      { src: "/6.jpeg", height: "h-64 md:h-96" }, // Tall on md+
     ],
     // Column 4
     [

@@ -34,7 +34,7 @@ export default function Staff() {
       specialization: "Child Development & Behavioral Therapy"
     },
     {
-      name: "Heeba Sheikh",
+      name: "Dr. Heeba Sheikh",
       title: "Occupational Therapist (B.OT)",
       specialization: "Pediatric Occupational Therapy"
     },
@@ -42,6 +42,16 @@ export default function Staff() {
       name: "Dr. Vijay Sonavane",
       title: "MBBS, MD Pediatrics (2009), P.G.P.N USA",
       specialization: "Pediatrician"
+    },
+    {
+      name: "Sushama Prashant Karade",
+      title: "B.A.DECSE",
+      specialization: "Early Childhood Special Education"
+    },
+    {
+      name: "Dr. Runali Ram Bagade",
+      title: "B.OT, (Developmental Disabilities)",
+      specialization: "Occupational therapy"
     },
   ]
 
